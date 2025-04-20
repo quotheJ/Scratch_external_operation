@@ -1,6 +1,7 @@
 import scratchattach as sa
 from scratchattach.utils.exceptions import LoginFailure
 
+
 class TextEffect:
     BLACK          = '\033[30m'#(文字)黒
     RED            = '\033[31m'#(文字)赤
@@ -26,6 +27,7 @@ class TextEffect:
     BG_DEFAULT     = '\033[49m'#背景色をデフォルトに戻す
     RESET          = '\033[0m'#全てリセット
 
+
 def login_scratch():
     print("<Login>")
     global session
@@ -36,6 +38,7 @@ def login_scratch():
         print(f"{TextEffect.CYAN}{TextEffect.BOLD}Login successful{TextEffect.RESET}")
     except LoginFailure:
         print(f"{TextEffect.RED}{TextEffect.BOLD}ERROR: Login failed. Your username or password may be incorrect. Please check. If the problem persists, you may have typed incorrectly too many times, so try accessing scratch from your browser, logging out, and then logging in from your browser.{TextEffect.RESET}")
+
 
 def cloud_variable():
     project_id = input("project_id: ")
